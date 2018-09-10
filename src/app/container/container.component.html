@@ -1,0 +1,11 @@
+<!-- <p>
+  {{images}}
+</p> -->
+<div>
+  <app-cell *ngFor="let image of images"
+    [imgUrlGray]="'https://picsum.photos/g/600/400/?image=' + image.id"
+    [imgUrlColor]="'https://picsum.photos/600/400/?image=' + image.id"
+    [enlarged]="false"
+    [author]="image.author"
+  ></app-cell>
+</div>
