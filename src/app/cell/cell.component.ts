@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cell',
@@ -7,15 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CellComponent implements OnInit {
 
-  @Input() imgUrlColor: string;
-  @Input() imgUrlGray: string;
-  @Input() enlarged: boolean;
-  @Input() author: string;
-  @Input() update: Function;
+  @Input() imgUrl: string;
+  @Input() imgId: number;
+  @Input() cellSize: string;
+  @Output() idEmitter = new EventEmitter();
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  update() {
+    this.idEmitter.emit(this.imgId);
+  }
 }

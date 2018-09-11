@@ -1,2 +1,3 @@
-<img src="{{enlarged ? imgUrlColor : imgUrlGray}}"
-alt="{{'photo by ' + author}}"/>
+<img [src]="imgUrl"
+(mouseover)="update()"
+[class]="cellSize"/>

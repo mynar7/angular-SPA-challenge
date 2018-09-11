@@ -1,0 +1,10 @@
+.small {
+    width: 256px;
+    transition: width 500ms ease-out;
+}
+
+.big {
+    width: 512px;
+    grid-column: span 2;
+    grid-row: span 2;
+}

@@ -1,11 +1,11 @@
 <!-- <p>
   {{images}}
 </p> -->
-<div>
-  <app-cell *ngFor="let image of images"
-    [imgUrlGray]="'https://picsum.photos/g/600/400/?image=' + image.id"
-    [imgUrlColor]="'https://picsum.photos/600/400/?image=' + image.id"
-    [enlarged]="false"
-    [author]="image.author"
+<div class="container">
+  <app-cell *ngFor="let image of imageArr"
+    [imgUrl]="image.src"
+    [imgId]="image.id"
+    [cellSize]="image.enlarged ? 'big small' : 'small'"
+    (idEmitter)="handleEmission($event)"
   ></app-cell>
 </div>
