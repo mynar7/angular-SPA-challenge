@@ -5,7 +5,8 @@
   <app-cell *ngFor="let image of imageArr"
     [imgUrl]="image.src"
     [imgId]="image.id"
-    [cellSize]="image.enlarged ? 'big small' : 'small'"
+    [class]="image.enlarged ? 'big small' : 'small'"
+    [cellSize]="image.enlarged ? 'animate' : ''"
     (idEmitter)="handleEmission($event)"
   ></app-cell>
 </div>

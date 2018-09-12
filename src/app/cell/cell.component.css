@@ -1,10 +1,20 @@
-.small {
-    width: 256px;
-    transition: width 500ms ease-out;
+img {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
 }
 
-.big {
-    width: 512px;
-    grid-column: span 2;
-    grid-row: span 2;
+.animate {
+    animation: grow 0.5s forwards;
 }
+
+@keyframes grow {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+  }
